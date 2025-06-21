@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unos filma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Unos</h1></header>
+    <nav>
+        <ul>
+            <li><a href="index.php">Početna</a></li>
+            <li><a href="kategorija.php?kategorija=akcija">Akcija</a></li>
+            <li><a href="kategorija.php?kategorija=drama">Drama</a></li>
+            <li><a href="kategorija.php?kategorija=komedija">Komedija</a></li>
+            <li><a href="kategorija.php?kategorija=horor">Horor</a></li>
+            <li><a href="unos.html">Unos</a></li>
+            <li><a href="arhivirane.php">Arhiva</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form name="unos_filma" action="skripta.php" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="title">Naslov filma/serije:</label>
+                <input type="text" name="title" required>
+            </div>
+
+            <div>
+                <label for="about">Kratki opis (do 200 znakova):</label>
+                <textarea name="about" rows="2" cols="50" maxlength="200" required></textarea>
+            </div>
+
+            <div>
+                <label for="content">Opis filma:</label>
+                <textarea name="content" rows="6" cols="50" required></textarea>
+            </div>
+
+            <div>
+                <label for="genre">Žanr:</label>
+                <select name="genre">
+                    <option value="akcija">Akcija</option>
+                    <option value="drama">Drama</option>
+                    <option value="komedija">Komedija</option>
+                    <option value="horor">Horor</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="poster">Poster filma:</label>
+                <input type="file" name="poster" accept="image/*">
+            </div>
+
+            <div>
+                <label for="show">Prikazati na početnoj?</label>
+                <input type="checkbox" name="show">
+            </div>
+
+            <div>
+                <button type="reset">Poništi</button>
+                <button type="submit">Pošalji</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Moji filmovi</p>
+    </footer>
+</body>
+</html>
